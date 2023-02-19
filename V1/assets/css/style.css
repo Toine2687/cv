@@ -1,0 +1,205 @@
+html{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	background: linear-gradient(-45deg, #D1CFBC, #C8DBFF, #D4FFD7, #FFC4A0);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.navBar a{
+    padding: 3px 15px;
+}
+
+.navBar a:hover {
+    background-color: rgba(250, 250, 230, .5);
+    color: gray;
+    border-radius: 30px; 
+}
+
+h1{
+	color: #2e5e43;
+}
+
+@media all and (max-width:576px){
+	h1{
+		text-align:center;
+		width: 100%;
+		font-size: 2em;
+		font-family: 'Noto Sans', sans-serif;
+		font-stretch: condensed;
+	}
+}
+
+@media all and (min-width:576px){
+	h1{
+		font-size: 5em;
+		text-align: center;
+		font-family: 'Noto Sans', sans-serif;	
+	}
+}
+.face {
+	transition: transform .7s ease-in-out;
+}
+.face:hover {
+	transform: rotate(90deg);
+}
+
+/* ============== ACCORDEON ========== */.accordion {
+	width: 100%;
+	max-width: 1080px;
+	height: 250px;
+	overflow: hidden;
+	margin: 50px auto;
+}
+.accordion ul {
+	width: 100%;
+	display: table;
+	table-layout: fixed;
+	margin: 0;
+	padding: 0;
+}
+.accordion ul li {
+	display: table-cell;
+	vertical-align: bottom;
+	position: relative;
+	width: 16.666%;
+	height: 250px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	transition: all 500ms ease;
+}
+.accordion ul li div {
+	display: block;
+	overflow: hidden;
+	width: 100%;
+}
+.accordion ul li div a {
+	display: block;
+	height: 250px;
+	width: 100%;
+	position: relative;
+	z-index: 3;
+	vertical-align: bottom;
+	padding: 15px 20px;
+	box-sizing: border-box;
+	color: #fff;
+	text-decoration: none;
+	font-family: Open Sans, sans-serif;
+	transition: all 200ms ease;
+}
+.accordion ul li div a * {
+	opacity: 0;
+	margin: 0;
+	width: 100%;
+	text-overflow: ellipsis;
+	position: relative;
+	z-index: 5;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-transform: translateX(-20px);
+	transform: translateX(-20px);
+	-webkit-transition: all 400ms ease;
+	transition: all 400ms ease;
+}
+.accordion ul li div a h2 {
+	font-family: Montserrat, sans-serif;
+	text-overflow: clip;
+	font-size: 24px;
+	text-transform: uppercase;
+	margin-bottom: 2px;
+	top: 160px;
+}
+.accordion ul li div a p {
+	top: 160px;
+	font-size: 13.5px;
+}
+.accordion ul li:nth-child(1) {
+	background-image: url("http://michael-ferry.com/assets/accordion1.jpg");
+}
+.accordion ul li:nth-child(2) {
+	background-image: url("http://michael-ferry.com/assets/accordion2.jpg");
+}
+.accordion ul li:nth-child(3) {
+	background-image: url("http://michael-ferry.com/assets/accordion3.jpg");
+}
+.accordion ul li:nth-child(4) {
+	background-image: url("http://michael-ferry.com/assets/accordion4.jpg");
+}
+.accordion ul li:nth-child(5) {
+	background-image: url("http://michael-ferry.com/assets/accordion5.jpg");
+}
+.accordion ul li:nth-child(6) {
+	background-image: url("http://michael-ferry.com/assets/accordion6.jpg");
+}
+.accordion ul:hover li, .accordion ul:focus-within li {
+	width: 8%;
+}
+.accordion ul li:focus {
+	outline: none;
+}
+.accordion ul:hover li:hover,
+.accordion ul li:focus, .accordion ul:focus-within li:focus {
+	width: 60%;
+}
+.accordion ul:hover li:hover a,
+.accordion ul li:focus a, .accordion ul:focus-within li:focus a {
+	background: rgba(0, 0, 0, 0.4);
+}
+.accordion ul:hover li:hover a *,
+.accordion ul li:focus a *, .accordion ul:focus-within li:focus a * {
+	opacity: 1;
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+}
+.accordion ul:hover li {
+	width: 8% !important;
+}
+.accordion ul:hover li a * {
+	opacity: 0 !important;
+}
+.accordion ul:hover li:hover {
+	width: 60% !important;
+}
+.accordion ul:hover li:hover a {
+	background: rgba(0, 0, 0, 0.4);
+}
+.accordion ul:hover li:hover a * {
+	opacity: 1 !important;
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+}
+/* // Stack items */
+@media screen and (max-width: 600px) {
+	/* // IE gets fussy if this isn't here */
+	body { margin:0; }
+	.accordion {
+		height:auto;
+		ul,ul:hover {
+		li,li:hover {
+			position:relative;
+			display:table;
+			table-layout:fixed;
+			width:100%;
+			-webkit-transition:none;
+			transition:none;
+				}
+			}
+		}
+}
+/* ============== FIN ACCORDEON =========== */

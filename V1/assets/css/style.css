@@ -3,6 +3,8 @@ html{
     padding: 0;
 }
 
+/* =========== FOND GRADIENT ============== */
+
 body {
 	background: linear-gradient(-45deg, #D1CFBC, #C8DBFF, #D4FFD7, #FFC4A0);
 	background-size: 400% 400%;
@@ -22,11 +24,13 @@ body {
 	}
 }
 
+/* =============== NAV =============== */
+
 .navBar a{
     padding: 3px 15px;
 }
 
-.navBar a:hover {
+a:hover {
     background-color: rgba(250, 250, 230, .5);
     color: gray;
     border-radius: 30px; 
@@ -53,19 +57,113 @@ h1{
 		font-family: 'Noto Sans', sans-serif;	
 	}
 }
+
+/* ================ TROMBINE INTRO ================ */
 .face {
-	transition: transform .7s ease-in-out;
+	transition: transform 0.5s ease-in-out;
+	max-width: 10em;
 }
 .face:hover {
-	transform: rotate(90deg);
+	transform: rotate(-5deg);
+
 }
 
-/* ============== ACCORDEON ========== */.accordion {
+/* ================= TECHNOS PRESENTES ET FUTURES ============= */
+
+#technos, #inProgress{
+	max-width: 80%;
+}
+.box {
+	background: rgba(255,255,255,0.24);
+	margin-top: 1%;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+@media all and (min-width:900px){
+	.box{
+		padding: 20px 50px;
+	}
+} 
+.box:hover {
+	animation-duration: 0.15s;
+	border-left: 5px solid rgba(255,255,255,0.010);
+	box-shadow: 0 14px 28px rgba(46, 94, 67,0.25), 0 10px 10px rgba(46, 94, 67,0.22);
+}
+
+/* =============== TRAVAUX PRECEDENTS ================  */
+
+#previousWorks img{
+	border-radius: 30px;
+	padding-top: 10px;
+}
+@media all and (max-width:600px){
+	#previousWorks img{
+		padding-left: 10;
+		padding-right: 10;
+	}
+}
+@media all and (min-width:600px){
+	#previousWorks img{
+		padding-left: 0;
+		padding-right: 0;
+		filter: opacity(90%);
+		-webkit-filter: opacity(90%);
+	}
+}
+#previousWorks img:hover{
+	box-shadow: 0 14px 28px rgba(46, 94, 67,0.25), 0 10px 10px rgba(46, 94, 67,0.22);
+	filter: opacity(100%);
+	-webkit-filter: opacity(100%);
+}
+/* ============= FOOTER ============== */
+footer li{
+	list-style: none;
+	color: black;
+}
+footer a{
+	text-decoration: none;
+	color: black;
+}
+
+/* ================ page ABOUT ============= */
+.namePart1{
+	letter-spacing: 0.3em;
+}
+.namePart2{
+	letter-spacing: 0.3em;
+}
+.namePart3{
+	letter-spacing: 0.45em;
+}
+/* ======= FRISE ============== */
+.timelineElement{
+	margin-top: 1%;
+	background-color: #2e5e43;
+	color: white;
+	border-radius: 30px;
+	flex-wrap: nowrap;
+	height: 4em;
+	align-items: center;
+}
+.timelineElement p{
+	margin: 0;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+/* ========== Interets ===========  */
+#values{
+	background-color: rgba(255,255,255,0.24);
+	border-radius: 30px;
+	box-shadow: 0 14px 28px rgba(46, 94, 67,0.25), 0 10px 10px rgba(46, 94, 67,0.22);
+}
+/* ============== ACCORDEON ========== */
+/* .accordion {
 	width: 100%;
 	max-width: 1080px;
 	height: 250px;
 	overflow: hidden;
 	margin: 50px auto;
+	border-radius: 30px;
 }
 .accordion ul {
 	width: 100%;
@@ -130,22 +228,28 @@ h1{
 	font-size: 13.5px;
 }
 .accordion ul li:nth-child(1) {
-	background-image: url("http://michael-ferry.com/assets/accordion1.jpg");
+	background-image: url("/assets/img/htmlLogo.webp");
 }
 .accordion ul li:nth-child(2) {
-	background-image: url("http://michael-ferry.com/assets/accordion2.jpg");
+	background-image: url("/assets/img/cssLogo.webp");
 }
 .accordion ul li:nth-child(3) {
-	background-image: url("http://michael-ferry.com/assets/accordion3.jpg");
+	background-image: url("/assets/img/jsLogo.webp");
 }
 .accordion ul li:nth-child(4) {
-	background-image: url("http://michael-ferry.com/assets/accordion4.jpg");
+	background-image: url("/assets/img/phpLogo.webp");
 }
 .accordion ul li:nth-child(5) {
-	background-image: url("http://michael-ferry.com/assets/accordion5.jpg");
+	background-image: url("/assets/img/seoLogo.webp");
 }
 .accordion ul li:nth-child(6) {
-	background-image: url("http://michael-ferry.com/assets/accordion6.jpg");
+	background-image: url("/assets/img/wordpressLogo.webp");
+}
+.accordion ul li:nth-child(7) {
+	background-image: url("/assets/img/photoshopLogo.webp");
+}
+.accordion ul li:nth-child(8) {
+	background-image: url("/assets/img/lightroomLogo.webp");
 }
 .accordion ul:hover li, .accordion ul:focus-within li {
 	width: 8%;
@@ -184,9 +288,8 @@ h1{
 	-webkit-transform: translateX(0);
 	transform: translateX(0);
 }
-/* // Stack items */
+
 @media screen and (max-width: 600px) {
-	/* // IE gets fussy if this isn't here */
 	body { margin:0; }
 	.accordion {
 		height:auto;
@@ -201,5 +304,5 @@ h1{
 				}
 			}
 		}
-}
+} */
 /* ============== FIN ACCORDEON =========== */

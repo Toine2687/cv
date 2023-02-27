@@ -154,7 +154,16 @@ footer a{
 #values{
 	background-color: rgba(255,255,255,0.24);
 	border-radius: 30px;
-	box-shadow: 0 14px 28px rgba(46, 94, 67,0.25), 0 10px 10px rgba(46, 94, 67,0.22);
+	box-shadow: 0 14px 28px rgba(46, 94, 67,0.20), 0 10px 10px rgba(46, 94, 67,0.18);
+	padding: 20px;
+}
+#values h2{
+	color: #49966a;
+	font-weight: 700;
+}
+#values h3{
+	color: #377250;
+	font-weight: 700;
 }
 /* ============== ACCORDEON ========== */
 /* .accordion {

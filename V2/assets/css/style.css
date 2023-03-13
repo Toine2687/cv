@@ -1,0 +1,492 @@
+/* Pense bête (comme les polices) */
+/* ==================================== */
+/* font-family: 'Lobster', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Spectral', serif; */
+/* ==================================== */
+body {
+	/* background-color: #dedede; */
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	background-color: #faf6ee;
+	color: rgb(37, 36, 80);
+}
+header {
+	z-index: 1;
+	display: flex;
+}
+nav {
+	font-family: 'Spectral', serif;
+	width: 90%;
+	margin: auto;
+	border-bottom: 1px solid black;
+	color: black;
+	margin-bottom: 0.8vh;
+}
+#topLeftName p {
+	display: flex;
+	align-items: start;
+	margin-top: 0;
+	font-size: 1.4em;
+	font-weight: bold;
+	margin: 0;
+}
+#menu {
+	display: flex;
+	justify-content: space-between;
+	list-style-type: none;
+	padding: 0;
+	margin-bottom: 0;
+}
+li ul {
+	display: flex;
+	justify-content: space-between;
+	gap: 0.8em;
+	list-style-type: none;
+	font-size: 1.2em;
+}
+nav a {
+	text-decoration: none;
+	color: black;
+	display: block;
+	transition: 1s;
+}
+nav a:hover {
+	font-weight: bolder;
+	font-style: oblique;
+	border-top: 1px solid black;
+	padding-right: 0.2em;
+	padding-left: 0.2em;
+	transition: 0.5s ease;
+	-webkit-transition: 0.9s ease;
+}
+/* ===================================
+=============FIN DU HEADER============
+=================================== */
+main {
+	display: block;
+	margin: 0 3em;
+	/* background-color: aqua; */
+	justify-content: center;
+}
+#intro {
+	display: flex;
+	flex-direction: column;
+}
+#time {
+	position: absolute;
+	top: 5em;
+	right: 2em;
+}
+#creativeDiv {
+	display: flex;
+	flex-direction: column;
+	margin-top: 2em;
+	align-items: center;
+	font-size: 2.7em;
+}
+#creativeTop {
+	display: flex;
+}
+#lobsterFont {
+	font-family: 'Lobster', cursive;
+	font-size: 2em;
+	opacity: 0;
+	animation: creative-slide 2s ease-in 1s forwards;
+}
+/* #web {
+	font-family: 'Spectral', serif;
+	color: #009175;
+	font-size: 1.1em;
+} */
+@keyframes creative-slide {
+	0% {
+		opacity: 0;
+		translate: 0em 0.6em;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+#creativeBottom {
+	font-family: 'Montserrat', sans-serif;
+	display: flex;
+	flex-direction: row;
+	font-size: 0.9em;
+}
+#creativeLeft {
+	opacity: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	animation: creativeLeft-slide 2s ease-in 1.3s forwards;
+}
+@keyframes creativeLeft-slide {
+	0% {
+		opacity: 0;
+		transform: translate(1em);
+	}
+	100% {
+		opacity: 1;
+	}
+}
+#creativeLeft img {
+	width: 80%;
+	border-radius: 0.1em;
+}
+#creativeDiv p {
+	margin: 0;
+}
+#web {
+	text-align: center;
+}
+#creativeRight {
+	padding-left: 0.5em;
+	text-align: start;
+	margin-left: 0.5em;
+	border-left: 1px solid black;
+}
+.word1 {
+	opacity: 0;
+	overflow: hidden;
+	animation: slidein 1.2s ease-in 1.3s forwards;
+}
+.word2 {
+	opacity: 0;
+	overflow: hidden;
+	animation: slidein 1.5s ease-in-out 2s forwards;
+}
+.word3 {
+	opacity: 0;
+	overflow: hidden;
+	animation: slidein 1.7s ease-in 1.7s forwards;
+}
+@keyframes slidein {
+	0% {
+		opacity: 0;
+		transform: translate(-1em);
+	}
+	100% {
+		opacity: 1;
+	}
+}
+#introBottom {
+	flex-direction: row;
+	width: 70vw;
+	margin-top: 15em;
+}
+#stupidSentence {
+	margin-left: 5em;
+}
+#stupidSentence p {
+	font-size: 1.2em;
+	letter-spacing: 4px;
+	font-family: Tahoma, sans-serif;
+	margin: 0.2em;
+	/* background-color: red; */
+}
+#wheelRock1::before {
+	color: #009175;
+	content: 'pierre';
+	animation: switchWords 5s ease-in-out infinite;
+}
+#wheelRock2::before {
+	color: #009175;
+	content: 'pierre';
+	animation: switchWords 5s ease-in-out 2.5s infinite;
+}
+@keyframes switchWords {
+	0% {
+		content: 'pierre';
+	}
+	25% {
+		opacity: 0;
+	}
+	50% {
+		content: 'roue';
+		opacity: 1;
+	}
+	70% {
+		opacity: 0;
+	}
+	95% {
+		content: 'pierre';
+	}
+}
+#wheel {
+	width: 5em;
+	position: absolute;
+	z-index: -1;
+	top: 42em;
+	left: 15em;
+	animation: spin 20s ease-in-out infinite;
+	opacity: 0.3;
+}
+
+@keyframes spin {
+	10% {
+		transform: rotate(45deg);
+	}
+	50% {
+		transform: rotate(360deg);
+	}
+	90% {
+		transform: rotate(45deg);
+	}
+}
+.triple {
+	position: absolute;
+	width: 35vw;
+	border-radius: 1.5em;
+	box-shadow: rgba(0, 0, 0, 0.2) 8px 8px 25px;
+	filter: grayscale(1);
+}
+#demoImg1 {
+	top: 34em;
+	right: 10vw;
+
+	z-index: 1;
+}
+#demoImg1:hover {
+	/* top: 30em;
+	right: 7vw;
+	transform: translate((2em 2em));
+	transform: rotate(10deg); */
+	filter: grayscale(0);
+	z-index: 5;
+	/* transition: 1.3s ease-in-out; */
+}
+#demoImg2 {
+	top: 38em;
+	right: 12vw;
+	z-index: 2;
+}
+#demoImg2:hover {
+	/* top: 38em;
+	right: 17vw; */
+	/* transform: rotate(10deg); */
+	filter: grayscale(0);
+	z-index: 5;
+	/* transition: 3s ease-in-out; */
+}
+#demoImg3 {
+	top: 42em;
+	right: 14vw;
+	z-index: 3;
+}
+#demoImg3:hover {
+	/* top: 34em;
+	right: 7vw;
+	transform: translate((2em 2em));
+	transform: rotate(10deg); */
+	filter: grayscale(0);
+	/* transition: 1.3s ease-in-out; */
+}
+#lines {
+	position: absolute;
+	z-index: -1;
+	width: 94vw;
+	top: 58em;
+	right: 3em;
+}
+/* ===================================
+=============FIN INTRO============
+=================================== */
+#resume {
+	margin-top: 29em;
+	margin-bottom: 1em;
+	padding-bottom: 8em;
+	border-bottom: 1px solid rgb(37, 36, 80);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+#resumeTop {
+	display: flex;
+	justify-content: space-around;
+}
+#helpIntro {
+	font-family: 'Spectral', serif;
+	font-size: 1.4em;
+}
+#domains {
+	text-align: end;
+	font-family: 'Montserrat', sans-serif;
+}
+#domains p:last-of-type {
+	margin-bottom: 0;
+}
+#speech {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.2em;
+	width: 45%;
+	margin-left: 4em;
+}
+#speech a {
+	color: #009175;
+}
+#hey {
+	font-family: 'Lobster', cursive;
+	font-size: 2.4em;
+	margin-top: 0;
+	margin-bottom: 1.5em;
+	transform: rotate(-10deg);
+	letter-spacing: 3px;
+	text-decoration: underline;
+}
+/* ==================================== */
+/* =======Frise chronologique======= */
+/* ==================================== */
+.container {
+	max-width: 1300px;
+	width: 80vw;
+	height: auto;
+	margin: 8em 0 0 3em;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: space-evenly;
+	gap: 1em;
+}
+.gridItem {
+	display: flex;
+	width: 100%;
+	animation: growingTime 2s ease-in forwards;
+}
+.gSubItem {
+	min-width: 200px;
+	font-family: 'Montserrat', sans-serif;
+	padding: 0 1em;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	background-color: rgb(37, 36, 80);
+	color: white;
+	border-radius: 3em;
+	align-items: center;
+}
+#gsi0 {
+	width: 100%;
+	color: rgb(37, 36, 80);
+	background-color: #faf6ee;
+}
+#gsi0 img {
+	opacity: 0.8;
+	width: 2.5em;
+}
+#gsi0 span {
+	font-family: 'Lobster', cursive;
+	font-size: 4em;
+	color: #009175;
+}
+#gsi0 h4 {
+	margin-left: 4em;
+	font-style: italic;
+	letter-spacing: 3px;
+	padding: 0 1em;
+	border-bottom: 1px solid rgb(37, 36, 80);
+	border-radius: 1em;
+}
+#gsi1 {
+	margin-left: 75%;
+	width: 25%;
+}
+#gsi2 {
+	margin-left: 40%;
+	width: 60%;
+}
+#gsi3 {
+	margin-left: 15%;
+	width: 30%;
+}
+#gsi4 {
+	width: 20%;
+}
+.years {
+	font-family: 'Lobster', cursive;
+	font-size: 1.1em;
+}
+@keyframes growingTime {
+	0% {
+		opacity: 0;
+		/* width: 3em; */
+		/* margin: 0; */
+	}
+	100% {
+		opacity: 1;
+		width: 100%;
+	}
+}
+/* ===============================================
+=================== FIN RESUME ===================
+=============================================== */
+#pitch {
+	width: 90vw;
+	display: flex;
+	flex-wrap: nowrap;
+}
+#info {
+	width: 80%;
+}
+#info h2 {
+	font-size: 2em;
+	font-family: 'Spectral', serif;
+	margin: 0;
+}
+#info h2 span {
+	font-size: 1.8em;
+	color: #009175;
+	font-family: 'Lobster', cursive;
+}
+#info div:first-of-type {
+	display: flex;
+	justify-content: space-between;
+}
+#face {
+	margin: 8em 2em;
+	width: 6vw;
+	height: 6vh;
+	min-width: 90px;
+	min-height: 90px;
+	max-width: 6vw;
+	max-height: 6vh;
+	transform: rotate(-90deg);
+}
+#infoSpeech {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 0.9em;
+	margin: auto 2em;
+}
+#infoSpeech h5 {
+	font-family: 'Spectral', serif;
+	font-size: 1.1em;
+	margin: 0 2em;
+}
+#pitch h4 {
+	font-family: 'Spectral', serif;
+	letter-spacing: 2px;
+	font-size: 1.1em;
+}
+#present h4 {
+	margin-top: 10em;
+}
+
+#skills {
+	font-family: 'Montserrat', sans-serif;
+	padding-left: 1em;
+	width: 20%;
+	height: 70vh;
+	border-left: 1px solid rgb(37, 36, 80);
+	padding-bottom: 10em;
+}
+#skills span {
+	font-style: italic;
+}
+#skills a {
+	text-decoration: none;
+	color: #009175;
+}
+.links li {
+	list-style-type: lower-greek;
+}

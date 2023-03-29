@@ -457,23 +457,25 @@ section {
 	width: 90vw;
 	display: flex;
 	flex-wrap: nowrap;
+	flex-direction: row-reverse;
 }
 #info {
-	width: 80%;
+	width: 30%;
 }
-#info h2 {
+#skills h2 {
 	font-size: 2em;
 	font-family: 'Spectral', serif;
 	margin: 0;
 }
-#info h2 span {
+#skills h2 span {
 	font-size: 1.8em;
 	color: #009175;
 	font-family: 'Lobster', cursive;
 }
-#info div:first-of-type {
+#skills div:first-of-type {
 	display: flex;
 	justify-content: space-between;
+	height: 23vh;
 }
 #face {
 	margin: 8em 2em;
@@ -500,26 +502,26 @@ section {
 	letter-spacing: 2px;
 	font-size: 1.1em;
 }
-#present h4 {
-	margin-top: 10em;
-}
 
 #skills {
 	font-family: 'Montserrat', sans-serif;
-	padding-left: 1em;
-	width: 20%;
+	border-right: 1px solid rgb(37, 36, 80);
+
+	/* padding-left: 1em; */
+	width: 60%;
 	height: 70vh;
-	border-left: 1px solid rgb(37, 36, 80);
-	padding-bottom: 10em;
+	/* padding-bottom: 10em; */
 }
 #skills span {
 	font-style: italic;
 }
-#skills a {
+#skills a,
+#info a {
 	text-decoration: none;
 	color: #009175;
 }
-#skills a:hover {
+#skills a:hover,
+#info a:hover {
 	font-family: 'Movement';
 }
 .links li {
